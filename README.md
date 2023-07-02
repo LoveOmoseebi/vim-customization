@@ -1,2 +1,2 @@
 # vim-customization
-the vim settings
+my vim settings
