@@ -1,9 +1,5 @@
-let mapleader =","
-filetype off
 
-set bg=light
-set go=a
-set mouse=a
+set bg=dark
 set nohlsearch
 set clipboard=unnamedplus
 "Sets tab size to 4 spaces
@@ -14,17 +10,6 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set fileformat=unix
-
-if empty(glob('~/.vim/autoload/plug.vim'))
-    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-" Plugins
-call plug#begin('~/.vim/plugged')
-Plug 'mattn/emmet-vim'
-call plug#end()
 
 
 " Some basics:
@@ -64,15 +49,6 @@ let g:user_emmet_leader_key=','
 
 "Automatically deletes all trailing whitespace on save.
        autocmd BufWritePre * %s/\s\+$//e
-
-"When shortcut files are updated, renew bash and vifm configs with new material:
-       autocmd BufWritePost ~/.config/bmdirs,~/.config/bmfiles !shortcuts
-
-"Update binds when sxhkdrc is updated.
-       autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
-
-"Run xrdb whenever Xdefaults or Xresources are updated.
-       autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
 
 "Navigating with guides
 	inoremap <leader><leader> <Esc>/<++><Enter>"_c4l
