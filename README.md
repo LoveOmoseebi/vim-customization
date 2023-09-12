@@ -14,5 +14,5 @@ It contains my personalized .vimrc and .bashrc files.
 * Auto-indent the next line
 * Marks the standard 80 characters on a line point
 * Sets the relative number line
-* <Esc> key remapped to jj. To press literal 'jj' characters, wait for one 1sec after pressing the first j.
+* Esc key remapped to jj. To press literal 'jj' characters, wait for one 1sec after pressing the first j.
 * Many more features
